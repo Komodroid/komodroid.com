@@ -1,0 +1,19 @@
+{% set tab = "home" %}
+{% set title = "Home"  %}
+
+{% extends "templates/base.html" %}
+
+{% block content %}
+<canvas data-name="aaabstract" id="shader" class="glslCanvas shader"
+style="background-color: rgba(1, 1, 1, 1);"></canvas>
+<div id="app">
+    <div class="uk-container">
+        <h1>Coming soon!</h1>
+    </div>
+    <script type="text/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
+    <script src="/js/index.js" type="module"></script>
+    <div class="footnote">
+        <p class="uk-text-small uk-text-center">Fragment by: <a href="https://fffuel.co/about/" target="_blank">©2023 Sébastien Noël</a></p>
+    </div>
+</div>
+{% endblock %}

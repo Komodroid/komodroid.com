@@ -1,0 +1,215 @@
+.uk-navbar-nav>li>a, .uk-navbar-item, .uk-navbar-toggle {
+  min-height: 80px;
+}
+
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: url("/fonts/Gilroy-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Gilroy-Heavy";
+  src: url("/fonts/Gilroy-Heavy.ttf");
+}
+
+@font-face {
+  font-family: "Gilroy-Light";
+  src: url("/fonts/Gilroy-Light.ttf");
+}
+
+.main-logo {
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Gilroy-Bold', sans-serif !important;
+  &::selection {
+    background: #333333;
+    color: rgb(255, 255, 255);
+  }
+}
+
+body, html {
+  color-scheme: dark;
+  background-color: #010101;
+  color: rgb(255, 255, 255);
+  min-height: 100vh;
+  overflow-y: hidden;
+  font-family: 'Gilroy-Bold', sans-serif;
+}
+
+#app {
+  color: white;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  user-select: none;
+  background: linear-gradient(rgb(2, 2, 2) 0%, rgba(2, 2, 2, 0.992) 11.7896%, rgba(2, 2, 2, 0.97) 21.3837%, rgba(2, 2, 2, 0.93) 29.12%, rgba(2, 2, 2, 0.88) 35.3363%, rgba(2, 2, 2, 0.82) 40.3704%, rgba(2, 2, 2, 0.75) 44.56%, rgba(2, 2, 2, 0.67) 48.243%, rgba(2, 2, 2, 0.59) 51.757%, rgba(2, 2, 2, 0.5) 55.44%, rgba(2, 2, 2, 0.416) 59.6296%, rgba(2, 2, 2, 0.325) 64.6637%, rgba(2, 2, 2, 0.24) 70.88%, rgba(2, 2, 2, 0.153) 78.6163%, rgba(2, 2, 2, 0.075) 88.2104%, rgba(2, 2, 2, 0) 100%);
+  li a {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    &.active {
+      color: #ffffff !important;
+    }
+  }
+  a.hamburguer {
+    // Create a hamburger menu out of css only
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    span {
+      position: absolute;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background-color: #ffffff;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+      &:nth-child(1) {
+        top: 0;
+      }
+      &:nth-child(2), &:nth-child(3) {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &:nth-child(4) {
+        bottom: 0;
+      }
+    }
+  }
+}
+
+#offcanvas-nav {
+  &::before {
+    background: rgba(1, 1, 1, 0);
+    backdrop-filter: blur(10px);
+  }
+  div.uk-offcanvas-bar {
+    background: hsla(0, 0%, 7%, 0.781);
+    border-radius: 30px 0 0 30px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.7);
+    a {
+      &.active {
+        color: #ffffff !important;
+      }
+    }
+  }
+}
+
+#init-overlay.ready {
+  animation: init-fadeout 0.5s;
+  animation-fill-mode: forwards;
+  pointer-events: none;
+  animation-delay: 0.5s;
+  @keyframes init-fadeout {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
+.uk-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  filter: grayscale(50%);
+}
+
+.uk-notification-message {
+  background: #1a1a1aa8;
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+  font-family: 'Gilroy-Light', sans-serif !important;
+}
+
+.uk-notification-close {
+  display: block;
+}
+
+.uk-close {
+  color: #ffffffb9;
+  &:hover {
+    color: #ffffff;
+  }
+}
+
+.uk-navbar-toggle-animate svg > [class*='line-'] {
+  transition: 0.2s ease-in-out;
+  transition-property: transform, opacity,;
+  transform-origin: center;
+  opacity: 1;
+}
+
+.uk-navbar-toggle svg > .line-3 { opacity: 0; }
+.uk-navbar-toggle-animate[aria-expanded="true"] svg > .line-3 { opacity: 1; }
+
+.uk-navbar-toggle-animate[aria-expanded="true"] svg > .line-2 { transform: rotate(45deg); }
+.uk-navbar-toggle-animate[aria-expanded="true"] svg > .line-3 { transform: rotate(-45deg); }
+
+.uk-navbar-toggle-animate[aria-expanded="true"] svg > .line-1,
+.uk-navbar-toggle-animate[aria-expanded="true"] svg > .line-4 { opacity: 0; }
+.uk-navbar-toggle-animate[aria-expanded="true"] svg > .line-1 { transform: translateY(6px) scaleX(0); }
+.uk-navbar-toggle-animate[aria-expanded="true"] svg > .line-4 { transform: translateY(-6px) scaleX(0); }
+
+#shader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+h1, h2, h3 {
+  color: #ffffff !important;
+}
+
+#app {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+}
+
+div.footnote {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: hsla(0, 0%, 10%, 0.3);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  p {
+    margin: 0;
+  }
+  a {
+    color: #ffffff;
+    &:hover {
+      color: #ffffff;
+    }
+  }
+}

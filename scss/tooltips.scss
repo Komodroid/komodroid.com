@@ -1,0 +1,128 @@
+.tippy-box[data-animation=fade][data-state=hidden] {
+  opacity: 0
+}
+
+[data-tippy-root] {
+  max-width: calc(100vw - 10px)
+}
+
+.tippy-box {
+  position: relative;
+  background-color: transparent;
+  color: #fff;
+  border-radius: 0px;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: normal;
+  outline: 0;
+  transition-property: transform, visibility, opacity
+}
+
+.tippy-box[data-placement^=top]>.tippy-arrow {
+  bottom: 0
+}
+
+.tippy-box[data-placement^=top]>.tippy-arrow:before {
+  bottom: -7px;
+  left: 0;
+  border-width: 8px 8px 0;
+  border-top-color: initial;
+  transform-origin: center top
+}
+
+.tippy-box[data-placement^=bottom]>.tippy-arrow {
+  top: 0
+}
+
+.tippy-box[data-placement^=bottom]>.tippy-arrow:before {
+  top: -7px;
+  left: 0;
+  border-width: 0 8px 8px;
+  border-bottom-color: initial;
+  transform-origin: center bottom
+}
+
+.tippy-box[data-placement^=left]>.tippy-arrow {
+  right: 0
+}
+
+.tippy-box[data-placement^=left]>.tippy-arrow:before {
+  border-width: 8px 0 8px 8px;
+  border-left-color: initial;
+  right: -7px;
+  transform-origin: center left
+}
+
+.tippy-box[data-placement^=right]>.tippy-arrow {
+  left: 0
+}
+
+.tippy-box[data-placement^=right]>.tippy-arrow:before {
+  left: -7px;
+  border-width: 8px 8px 8px 0;
+  border-right-color: initial;
+  transform-origin: center right
+}
+
+.tippy-box[data-inertia][data-state=visible] {
+  transition-timing-function: cubic-bezier(.54, 1.5, .38, 1.11)
+}
+
+.tippy-arrow {
+  width: 16px;
+  height: 16px;
+  color: #333
+}
+
+.tippy-arrow:before {
+  content: "";
+  position: absolute;
+  border-color: transparent;
+  border-style: solid
+}
+
+.tippy-content {
+  // position: relative;
+  // padding: 0px;
+  // z-index: 1
+  box-sizing: inherit;
+  border: 0;
+  vertical-align: baseline;
+  //position: fixed;
+  background-color: rgba(16,0,16,0.94);
+  padding: 0.375em;
+  font-family: Minecraftia ,sans-serif;
+  font-size: 16px;
+  word-spacing: 4px;
+  white-space: nowrap;
+  line-height: 1.25em;
+  //margin: 0.125em 0.25em;
+  pointer-events: none;
+  z-index: 9999;
+  color: #FFF;
+  text-shadow: 0.125em 0.125em 0 #3F3F3F;
+  top: 393px;
+  left: 438px;
+}
+
+.tippy-content::before {
+  content: "";
+  position: absolute;
+  top: 0.125em;
+  right: -0.125em;
+  bottom: 0.125em;
+  left: -0.125em;
+  border: 0.125em solid #100010;
+  border-style: none solid;
+  border-color: rgba(16,0,16,0.94);
+}
+
+.tippy-content::after {
+  content: "";
+  position: absolute;
+  top: 0.125em;
+  right: 0;
+  bottom: 0.125em;
+  left: 0;
+  border: 0.125em solid #2D0A63;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/img/favicon.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/css/uikit.min.css" />
+    <link rel="stylesheet" href="/scss/styles.scss" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {# Metadata #}
+    <title>Komodroid</title>
+    <meta name="description" content="Blue Void® is a Creative Agency.. Fully Specialized in: Brand Development, Marketing, Content-Creation, Video Editing and Graphic Design..">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://komodroid.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Blue Void®┃ Creative Agency">
+    <meta property="og:description" content="Blue Void® is a Creative Agency.. Fully Specialized in: Brand Development, Marketing, Content-Creation, Video Editing and Graphic Design..">
+    <meta property="og:image" content="https://komodroid.com/img/embed.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="komodroid.com">
+    <meta property="twitter:url" content="https://komodroid.com/">
+    <meta name="twitter:title" content="Blue Void®┃ Creative Agency">
+    <meta name="twitter:description" content="Blue Void® is a Creative Agency.. Fully Specialized in: Brand Development, Marketing, Content-Creation, Video Editing and Graphic Design..">
+    <meta name="twitter:image" content="https://komodroid.com/img/embed.png">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body>
+    {# <nav class="uk-navbar-container uk-navbar-transparent uk-light" id="top-nav">
+      <div class="uk-container uk-animation-slide-top-small">
+        <div uk-navbar="" class="uk-navbar active">
+          <div class="uk-navbar-left">
+            <img src="svg/logo-text-light.svg" alt="Komodroid Logo" width="150" height="50" class="uk-navbar-item uk-logo" uk-svg/>
+          </div>
+          <div class="uk-navbar-right">
+            <div class="uk-display-inline-block">
+              <ul class="uk-navbar-nav uk-visible@m">
+                <li><a class="active" href="#" id="link-home">Home</a></li>
+                <li><a href="#" id="link-about">About</a></li>
+                <li><a href="#" id="link-contact">Contact</a></li>
+              </ul>
+            </div>
+            <a class="uk-button uk-first-column uk-hidden@m hamburguer" uk-toggle="" href="#offcanvas-nav" role="button"><span></span><span></span><span></span><span></span></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="offcanvas-nav" uk-offcanvas="overlay: true; flip: true">
+      <div class="uk-offcanvas-bar uk-flex uk-flex-column uk-text-center uk-offcanvas-bar-animation uk-offcanvas-slide">
+        <button class="uk-offcanvas-close uk-icon uk-close uk-close-large" type="button" uk-close="" uk-toggle="cls: uk-close-large; mode: media; media: @s" aria-label="Close" style="top: 20px; right: 20px"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><line fill="none" stroke="#000" stroke-width="1.4" x1="1" y1="1" x2="19" y2="19"></line><line fill="none" stroke="#000" stroke-width="1.4" x1="19" y1="1" x2="1" y2="19"></line></svg></button>
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical" uk-nav="">
+          <li><a href="#" id="link-home-mobile">Home</a></li>
+          <li><a href="#" id="link-about-mobile">About</a></li>
+          <li><a href="#" id="link-contact-mobile">Contact</a></li>
+        </ul>
+      </div>
+    </div> #}
+    {% block content %}
+    {% endblock %}
+    <div id="init-overlay" style="display: flex; justify-content: center; align-items: center; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #000000; z-index: 9999;">
+      <img src="svg/logo-text-light.svg" alt="komodroid Logo" class="uk-navbar-item uk-logo">
+    </div>
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>
